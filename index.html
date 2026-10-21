@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Faculty of Education Research Conference 2026 – Detailed Programme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --primary: #003366;
+      --accent: #0059b3;
+      --bg-light: #f5f7fa;
+      --text-main: #f8f8fa;
+      --text-muted: #babcc7;
+      --border-light: #dddddd;
+      --shadow-soft: 0 2px 8px rgba(0,0,0,0.06);
+      --radius-card: 8px;
+      --radius-pill: 999px;
+    }
+
+    /* Session colour themes – UPDATE THESE COLOURS to match your Word colour coding */
+    .theme-blue { background: #e6f3ff; border-left: 4px solid #2674d9; }
+    .theme-green { background: #e7f6e7; border-left: 4px solid #2e8b57; }
+    .theme-gold { background: #fff7df; border-left: 4px solid #d2a106; }
+    .theme-purple { background: #f3e9ff; border-left: 4px solid #7d3fb0; }
+    .theme-red { background: #ffecec; border-left: 4px solid #c0392b; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      colour: var(--text-main);
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      colour: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #021E5F;        /* Example: soft blue-grey */
+      color: #ffffff;             /* White text on the header */
+      padding: 1.5rem 1rem;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;        /* row on larger screens */
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .header-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 0 0 0.4rem;
+    }
+
+    .header-subtitle {
+      font-size: 1rem;
+      margin: 0 0 0.6rem;
+    }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .header-meta span {
+      opacity: 0.95;
+    }
+
+    /* Image container on the right */
+    .header-image {
+      flex: 0 0 auto;
+      max-width: 260px;          /* Adjust as needed for desktop */
+    }
+
+    /* Make the image responsive */
+    .header-image img {
+      display: block;
+      width: 100%;
+      height: auto;              /* Keeps the aspect ratio correct */
+      border-radius: 4px;        /* Optional: rounded corners */
+    }
+
+    /* Mobile / small screens: stack image below text and full-width */
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;  /* stack vertically */
+        align-items: flex-start;
+      }
+
+      .header-image {
+        width: 100%;             /* image area spans full width on mobile */
+        max-width: none;
+      }
+
+      .header-image img {
+        width: 100%;             /* scale to screen width */
+        height: auto;
+      }
+    }
+
+    /* Navigation */
+    nav#session-nav {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-inner a {
+      padding: 0.4rem 0.9rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-light);
+      background: #ffffff;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .nav-inner a.nav-active {
+      background: #92a4b3;
+      border-color: #92a4b3;
+      color: #222222;           /* ensure good contrast */
+      font-weight: 600;
+    }
+
+    /* Layout */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    section > h2 {
+      font-size: 1.4rem;
+      margin: 0 0 0.75rem;
+      border-bottom: 2px solid var(--border-light);
+      padding-bottom: 0.25rem;
+    }
+
+    section > h3 {
+      font-size: 1.2rem;
+      margin: 1.25rem 0 0.5rem;
+    }
+
+    /* Schedule overview */
+    .schedule-overview {
+      background: var(--bg-light);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-soft);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .schedule-item {
+      display: flex;
+      flex-direction: row;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+    }
+
+    .schedule-time {
+      font-weight: 600;
+      min-width: 6rem;
+      font-size: 0.95rem;
+    }
+
+    .schedule-description {
+      font-size: 0.95rem;
+    }
+
+    .schedule-description strong {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .schedule-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* Table of contents */
+    .toc-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.5rem 0 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+      font-size: 0.95rem;
+    }
+
+    @media (min-width: 600px) {
+      .toc-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .toc-list li {
+      margin: 0;
+    }
+
+    /* Parallel sessions */
+    .timeslot {
+      margin-bottom: 1.5rem;
+    }
+
+    .timeslot-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .timeslot-header h3 {
+      margin: 0;
+    }
+
+    .timeslot-header .timeslot-time {
+      font-size: 0.95rem;
+      colour: var(--text-muted);
+    }
+
+    .session-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 768px) {
+      .session-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .session-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .session-card {
+      border-radius: var(--radius-card);
+      padding: 0.75rem 0.9rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .session-card h4 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .session-meta {
+      font-size: 0.9rem;
+      colour: var(--text-muted);
+    }
+
+    .session-meta span {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    .session-talks {
+      margin: 0.25rem 0 0;
+      padding-left: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .session-talks li {
+      margin-bottom: 0.2rem;
+    }
+
+    .session-talks li span.talk-title {
+      font-weight: 600;
+    }
+
+    /* Abstracts */
+    .abstract-session {
+      margin-bottom: 2rem;
+      padding: 0.75rem 0.75rem 1rem;
+      border-radius: var(--radius-card);
+      background: var(--bg-light);
+      border: 1px solid var(--border-light);
+    }
+
+    .abstract-session-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .abstract-session-header h3 {
+      margin: 0;
+    }
+
+    .abstract-session-header .room {
+      font-size: 0.9rem;
+      colour: var(--text-muted);
+    }
+
+    .abstract-session .back-link {
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+
+    details.abstract-item {
+      margin-top: 0.5rem;
+      background: #ffffff;
+      border-radius: 6px;
+      border: 1px solid var(--border-light);
+      padding: 0.4rem 0.6rem 0.6rem;
+    }
+
+    details.abstract-item summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      list-style: none;
+    }
+
+    details.abstract-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .abstract-authors {
+      font-size: 0.9rem;
+      colour: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .abstract-body {
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    /* Utility */
+    .muted {
+      colour: var(--text-muted);
+    }
+
+    .small {
+      font-size: 0.9rem;
+    }
+
+    /* Abstract session group colours */
+    .abstract-session.group-1 {
+        background: #C6D0D8;
+    }
+
+    .abstract-session.group-2 {
+      background: #EBE1E6;
+    }
+
+    .abstract-session.group-3 {
+      background: #E1E4E0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <!-- Left side: text -->
+    <div class="header-text">
+      <p class="header-title">Faculty of Education Research Conference 2026</p>
+      <p class="header-subtitle">
+        <em>Hope as a radical act: Resilience, relationships and reciprocity through educational research</em>
+      </p>
+      <div class="header-meta">
+        <span><strong>Date:</strong> 28 October 2026</span>
+        <span><strong>Time:</strong> 8:30 – 5:30</span>
+        <span><strong>Venue:</strong> Kwong Lee Dow Building, Parkville Campus</span>
+      </div>
+    </div>
+
+      <!-- Right side: image -->
+    <div class="header-image">
+      <img src="your-image-file.jpg" alt="Faculty of Education conference">
+    </div>
+  </div>
+</header>  
+
+  <div class="nav-inner">
+    <a href="#program-overview" class="nav-active">Program overview</a>
+    <a href="#table-of-contents">Table of contents</a>
+    <a href="#parallel-session-1">Parallel Session 1</a>
+    <a href="#parallel-session-2">Parallel Session 2</a>
+    <a href="#parallel-session-3">Parallel Session 3</a>
+    <a href="#abstracts">Abstracts</a>
+    <a href="#acknowledgements">Acknowledgements</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- General information -->
+  <section id="program-overview">
+    <h2>Programme Overview</h2>
+
+    <div class="schedule-overview">
+      <h3>General Information</h3>
+      <p class="small">
+        <strong>Registration:</strong> Open from 8:30 outside Q230 Kwong Lee Dow<br>
+        <strong>Coffee and tea:</strong> Available throughout the day outside 230 KLD<br>
+        <strong>Meals:</strong> Morning tea, lunch, and afternoon tea outside 230 KLD<br>
+        <strong>Eating and meeting spaces:</strong> 219 KLD and 231 KLD<br>
+        <strong>Low sensory room:</strong> 206 KLD<br>
+        <strong>Chill out room:</strong> 409 KLD<br>
+        <strong>Parent room:</strong> 211 KLD<br>
+        <strong>Parallel sessions:</strong> Held on the 2nd and 4th floors – please allow time to move between rooms.
+      </p>
+
+      <h3>Schedule Overview</h3>
+      <div class="schedule-grid">
+        <div class="schedule-item">
+          <div class="schedule-time">8:30</div>
+          <div class="schedule-description">
+            <strong>Registration opens</strong>
+            Outside Q230 Kwong Lee Dow
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">9:00 – 10:00</div>
+          <div class="schedule-description">
+            <strong>Opening Session</strong>
+            Q230 Kwong Lee Dow<br>
+            <strong>9:00 – 9:10</strong> Welcome – <em>Sonja Arndt and Kelly Trezise</em><br>
+            <strong>9:10 – 10:00</strong> Post‑Doctoral Fellows Keynote panel<br>
+            Facilitator: Kylie Smith<br>
+            Panel: Cristina Guarrella, Louise Couceiro, Fiona Druitt
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">10:00 – 10:30</div>
+          <div class="schedule-description">
+            <strong>Morning tea</strong>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">10:40 – 12:10</div>
+          <div class="schedule-description">
+            <strong><a href="#parallel-session-1">Parallel Session 1</a></strong>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">12:10 – 1:00</div>
+          <div class="schedule-description">
+            <strong>Lunch</strong>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">1:10 – 2:20</div>
+          <div class="schedule-description">
+            <strong><a href="#parallel-session-2">Parallel Session 2</a></strong>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">2:20 – 2:30</div>
+          <div class="schedule-description">
+            <strong>Break</strong>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">2:30 – 3:40</div>
+          <div class="schedule-description">
+            <strong><a href="#parallel-session-3">Parallel Session 3</a></strong>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">3:40 – 4:05</div>
+          <div class="schedule-description">
+            <strong>Afternoon tea</strong>
+          </div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="schedule-time">4:10 – 5:30</div>
+          <div class="schedule-description">
+            <strong>Closing Session</strong> (Q230 Kwong Lee Dow)<br>
+            <strong>4:10 – 5:15</strong> The Future of Education and Education Research – <em>Kate Reynolds, Julie McLeod, Sarah Furtuna &amp; Kelly Trezise</em><br>
+            <strong>5:15 – 5:30</strong> Wrap‑up for the day – <em>Sonja Arndt</em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 id="sustainability-notice">Sustainability Notice for Attendees</h3>
+    <p>
+      To support our sustainability goals, cups will not be provided for water at the conference. Please bring your own reusable bottle or cup and use the water refill stations available throughout the venue. Thank you for helping us reduce waste.
+    </p>
+  </section>
+
+  <!-- Table of contents -->
+  <section id="table-of-contents">
+    <h2>Table of Contents</h2>
+    <ul class="toc-list">
+      <li><a href="#program-overview">Programme &amp; General Information</a></li>
+      <li><a href="#parallel-session-1">Parallel Session 1 (10:40 – 12:10)</a></li>
+      <li><a href="#parallel-session-2">Parallel Session 2 (1:10 – 2:20)</a></li>
+      <li><a href="#parallel-session-3">Parallel Session 3 (2:30 – 3:40)</a></li>
+      <li><a href="#abstracts">Abstracts – Parallel Sessions 1–3</a></li>
+      <li><a href="#acknowledgements">Acknowledgements &amp; Organising committee</a></li>
+    </ul>
+  </section>
+
+  <!-- Parallel Session 1 -->
+  <section id="parallel-session-1">
+    <h2>Parallel Session 1 &mdash; 10:40 – 12:10</h2>
+
+    <div class="timeslot">
+      <div class="timeslot-header">
+        <h3>Parallel Session 1 (Rooms 217, 218, 417, 419, 421)</h3>
+        <span class="timeslot-time">10:40 – 12:10</span>
+      </div>
+
+      <div class="session-grid">
+        <article class="session-card theme-blue">
+          <h4>Parallel Session 1.1 &mdash; Strategic Leadership in Constrained Schools</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 217 KLD</span>
+            <span><strong>Chair:</strong> Nathalie Parry</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Understanding the experience of school leaders working part time</span> &mdash; Pauline Thompson</li>
+            <li><span class="talk-title">Zero sum game? How does school leaders strategically manage resources within a resource constrained environment?</span> &mdash; Stanley Koh</li>
+            <li><span class="talk-title">The importance of school structure and culture in ways senior leaders support middle leader success</span> &mdash; Caitlin Lamont</li>
+            <li><span class="talk-title">The champion paradox: Reconsidering the role of individuals in the long-term sustainment of programs and practice</span> &mdash; Hannah Stark</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps1-1">View abstracts for Parallel Session 1.1</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-green">
+          <h4>Parallel Session 1.2 &mdash; From Pre‑Service to Expert Teacher</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 218 KLD</span>
+            <span><strong>Chair:</strong> Catherine Pearn</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Navigating Praxis Shock in Early Career Teaching</span> &mdash; Abbey Boyer</li>
+            <li><span class="talk-title">Best Practices for Synchronous Online Intensive Learning (SOIL) in ITE</span> &mdash; Emma Stevenson</li>
+            <li><span class="talk-title">Cultivating Hope and Possibility Through Reciprocal Professional Learning</span> &mdash; Pip Robinson</li>
+            <li><span class="talk-title">Learning from machine learning: An exploratory study of teacher in‑the‑moment decision‑making and noticing incorporating computer vision as an analytical tool</span> &mdash; Man Ching Esther Chan</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps1-2">View abstracts for Parallel Session 1.2</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-gold">
+          <h4>Parallel Session 1.3 &mdash; Community, Culture and Participatory Educational Histories</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 417 KLD</span>
+            <span><strong>Chair:</strong> Rosie Yasmin</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">A tale of children’s ‘amader apa’ (our sister): the application of ‘reflexive rapport’ in a participatory ethnography with children living in a slum in Bangladesh</span> &mdash; Rosie Yasmin</li>
+            <li><span class="talk-title">Cultural studies goes (back) to school (and to uni and Canberra and…)</span> &mdash; Natalie Hendry</li>
+            <li><span class="talk-title">Culturally grounded pedagogies in sport and coaching education: A scoping review</span> &mdash; Carla Luguetti</li>
+            <li><span class="talk-title">Oral histories with communities: Understanding education change</span> &mdash; Sophie Rudolph</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps1-3">View abstracts for Parallel Session 1.3</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-purple">
+          <h4>Parallel Session 1.4 &mdash; Artful, Creative Pedagogies of Hope and Relation</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 419 KLD</span>
+            <span><strong>Chair:</strong> Vanessa Kukielka</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Creative, relational and reciprocal research into intergenerational arts learning</span> &mdash; Marnee Watkins</li>
+            <li><span class="talk-title">Artful ways of being an Educator: living, writing and teaching hopefully, ethically, radically</span> &mdash; Jack Tan</li>
+            <li><span class="talk-title">Improvising Hope: An experienced improvising artist creating hope, and practising to facilitate it for others.</span> &mdash; Catherine Ryan</li>
+            <li><span class="talk-title">Making, mattering and researching otherwise: collective, creative hope as a radical act</span> &mdash; Ana Ward‑Davies</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps1-4">View abstracts for Parallel Session 1.4</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-red">
+          <h4>Parallel Session 1.5 &mdash; Connecting Voices: Creative Approaches to Wellbeing and Professional Learning</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 421 KLD</span>
+            <span><strong>Chair:</strong> Olivia Zhang</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Resilience, creativity and the ukulele: Exploring a melody‑first approach to learning the ukulele for musician‑teachers living with chronic illness</span> &mdash; Fiona M. King</li>
+            <li><span class="talk-title">Voices Across Cultures: Exploring Young Adult Students’ Wellbeing Communication</span> &mdash; Jacqui Francis</li>
+            <li><span class="talk-title">Experiencing Agency: Teachers’ Capacities within Professional Learning Communities</span> &mdash; Emma Stevenson</li>
+            <li><span class="talk-title">A change agent turn in the a/r/tographic rhizome.</span> &mdash; Cory Dal Ponte</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps1-5">View abstracts for Parallel Session 1.5</a>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallel Session 2 -->
+  <section id="parallel-session-2">
+    <h2>Parallel Session 2 &mdash; 1:10 – 2:20</h2>
+
+    <div class="timeslot">
+      <div class="timeslot-header">
+        <h3>Parallel Session 2 (Rooms 217, 218, 417, 419, 421)</h3>
+        <span class="timeslot-time">1:10 – 2:20</span>
+      </div>
+
+      <div class="session-grid">
+        <article class="session-card theme-blue">
+          <h4>Parallel Session 2.1 &mdash; Hope, Mindfulness and Wellbeing Across the Lifespan</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 217 KLD</span>
+            <span><strong>Chair:</strong> Rosie Yasmin</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Beyond Attention and Awareness: Re‑examining Mindfulness Through Experienced Practitioners’ Understandings</span> &mdash; Olivia Zhang</li>
+            <li><span class="talk-title">Conceptualisations and Experiences of Hope in Children and Adolescents: A Systematic Review</span> &mdash; Liang Borlagdan‑Sevilla</li>
+            <li><span class="talk-title">A Needs Assessment of a Life Crafting Intervention to Promote Wellbeing of Older Chinese Adults</span> &mdash; Yue Pan</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps2-1">View abstracts for Parallel Session 2.1</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-green">
+          <h4>Parallel Session 2.2 &mdash; Voice, Identity and Relational Pedagogies Across Contexts</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 218 KLD</span>
+            <span><strong>Chair:</strong> Hannah Stark</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Advancing Indigenous research student success: the role of relational pedagogies</span> &mdash; Justin Wilkey</li>
+            <li><span class="talk-title">Who is the child? Consulting, listening, and learning with children in education research</span> &mdash; Louise Couceiro</li>
+            <li><span class="talk-title">Gendered Subjectivities of Chinese Haigui Women</span> &mdash; Suowa Zhang</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps2-2">View abstracts for Parallel Session 2.2</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-gold">
+          <h4>Parallel Session 2.3 &mdash; Pathways in Mathematics Learning</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 417 KLD</span>
+            <span><strong>Chair:</strong> Nathalie Parry</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Finger–Accuracy Data in Early Addition: Developmental Pathways, and Long‑Term Maths Achievement</span> &mdash; Kelly Trezise</li>
+            <li><span class="talk-title">Low‑performing upper‑secondary mathematics students: Investigating values and motivation in a neglected field</span> &mdash; Justine Sakurai</li>
+            <li><span class="talk-title">Cultivating Mathematics Teacher Identity: Supporting Pre‑Service Teachers in Primary Education</span> &mdash; Jennifer Sze</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps2-3">View abstracts for Parallel Session 2.3</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-purple">
+          <h4>Parallel Session 2.4 &mdash; Power, Voice and Agency in Contemporary Education</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 419 KLD</span>
+            <span><strong>Chair:</strong> Jorge Prado</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Melting the Iron Rice Bowl? Marketising Teacher Management through State Control in China</span> &mdash; Hanyue Zhong</li>
+            <li><span class="talk-title">Whose Voice? Hope, Agency, and Academic Becoming for Multilingual Students in the Age of AI</span> &mdash; Julie Choi</li>
+            <li><span class="talk-title">Male teachers as change agents: Motivations for challenging masculinities</span> &mdash; Troy Potter</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps2-4">View abstracts for Parallel Session 2.4</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-red">
+          <h4>Parallel Session 2.5 &mdash; Designing Educational Futures</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 421 KLD</span>
+            <span><strong>Chair:</strong> Emma Stevenson</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Education for Sustainability in Teacher Education: A Comparative Study</span> &mdash; Rhonda Di Biase</li>
+            <li><span class="talk-title">National subject associations and the state: A multiple case study exploring funding linkages between professional and political ecologies in physical education</span> &mdash; Ben Williams</li>
+            <li><span class="talk-title">Levelling Up Social Inclusion: Scaling and Evaluating a Neurodiversity‑Affirming Gaming Program Across Ten Schools</span> &mdash; Matthew Harrison</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps2-5">View abstracts for Parallel Session 2.5</a>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallel Session 3 -->
+  <section id="parallel-session-3">
+    <h2>Parallel Session 3 &mdash; 2:30 – 3:40</h2>
+
+    <div class="timeslot">
+      <div class="timeslot-header">
+        <h3>Parallel Session 3 (Rooms 217, 218, 417, 419, 421)</h3>
+        <span class="timeslot-time">2:30 – 3:40</span>
+      </div>
+
+      <div class="session-grid">
+        <article class="session-card theme-blue">
+          <h4>Parallel Session 3.1 &mdash; Gender, Sexuality and Critical Subjectivities in Education</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 217 KLD</span>
+            <span><strong>Chair:</strong> Sonja Arndt</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Parenting for Gender Equity in Early Childhood: Under the Australian Panopticon</span> &mdash; Kylie Smith</li>
+            <li><span class="talk-title">Lesbian Loo: Public Intimacies and the Infrastructures of Campus</span> &mdash; Queering Campus Collective</li>
+            <li><span class="talk-title">"I love it. But..." Affective tensions and professional unsettling in subject English</span> &mdash; Grace Elkins</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps3-1">View abstracts for Parallel Session 3.1</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-green">
+          <h4>Parallel Session 3.2 &mdash; Systems, Inequality and Global Educational Futures</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 218 KLD</span>
+            <span><strong>Chair:</strong> Emma Stevenson</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Inequity by Design: How education systems reproduce social inequalities</span> &mdash; Jenny Chesters</li>
+            <li><span class="talk-title">Social inequality in early access to the senior secondary curriculum in Australia</span> &mdash; Quentin Maire</li>
+            <li><span class="talk-title">From Utopia to Repair: UNESCO and the shifting politics of educational futures</span> &mdash; Jason Beech</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps3-2">View abstracts for Parallel Session 3.2</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-gold">
+          <h4>Parallel Session 3.3 &mdash; Mental Health, Belonging and Protection in School Communities</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 417 KLD</span>
+            <span><strong>Chair:</strong> Kelly Trezise</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">School social environment and the group psychology of belonging: Does it really mater for teachers and students?</span> &mdash; Katherine J Reynolds</li>
+            <li><span class="talk-title">Ameliorating the negative effects of school based mental health programs – student voice as a beacon of hope?</span> &mdash; Georgia Dawson</li>
+            <li><span class="talk-title">What students have, not only what they face: Risk‑protection profiles and adolescent mental health in secondary schools</span> &mdash; Ying Ye</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps3-3">View abstracts for Parallel Session 3.3</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-purple">
+          <h4>Parallel Session 3.4 &mdash; Multimodal and Multilingual Literacies in Teacher Education</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 419 KLD</span>
+            <span><strong>Chair:</strong> Vanessa Kukielka</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Re‑situating CLIL knowledge through teacher co‑design: scaffolding language‑for‑thinking for new arrivals transitioning to mainstream subject literacies</span> &mdash; Dannie Wang</li>
+            <li><span class="talk-title">Dialogic Interactions of Education Students with Australian Picture Books</span> &mdash; Helen Cozmescu</li>
+            <li><span class="talk-title">Making Learning Visible: Exploring Pre‑service Teachers' Academic Literacy Practices through Arts‑Rich Translanguaging Pedagogy</span> &mdash; Melissa Jufenna Slamet</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps3-4">View abstracts for Parallel Session 3.4</a>
+          </p>
+        </article>
+
+        <article class="session-card theme-red">
+          <h4>Parallel Session 3.5 &mdash; Data and Assessment in Education</h4>
+          <p class="session-meta">
+            <span><strong>Room:</strong> 421 KLD</span>
+            <span><strong>Chair:</strong> Hannah Stark</span>
+          </p>
+          <ul class="session-talks">
+            <li><span class="talk-title">Assessing the Value of Dynamic Assessment of Early Numeracy Abilities across the Preschool‑to‑School Transition</span> &mdash; Nathalie Parry</li>
+            <li><span class="talk-title">Active assessing: Supporting academic achievement and well‑being at the teaching‑learning‑assessing coalface</span> &mdash; John Quay</li>
+            <li><span class="talk-title">Educators on Screen: A Global Database for Educational Research</span> &mdash; Hugh Gundlach</li>
+          </ul>
+          <p class="small muted">
+            <a href="#abstracts-ps3-5">View abstracts for Parallel Session 3.5</a>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstracts -->
+  <section id="abstracts">
+    <h2>Abstracts</h2>
+
+    <!-- Parallel Session 1.1 -->
+    <div id="abstracts-ps1-1" class="abstract-session group-1">
+      <div class="abstract-session-header">
+        <h3>Parallel Session 1.1 &mdash; Strategic Leadership in Constrained Schools</h3>
+        <span class="room">Room 217 KLD</span>
+      </div>
+      <p class="back-link small">
+        <a href="#parallel-session-1">&larr; Back to Parallel Session 1 schedule</a>
+      </p>
+
+      <details class="abstract-item">
+        <summary>Understanding the experience of school leaders working part time</summary>
+        <div class="abstract-authors">Pauline Thompson, Ryan Dunn</div>
+        <div class="abstract-body">
+          <p>This study investigates the lived experience of school leaders employed part time, examining challenges, tensions and enablers to inform policy and practice. Motivated by concerns about teacher retention and constrained leadership pipelines, and by evidence that many teachers work part time yet few hold leadership roles, the research addresses three questions: what is it like to lead while part time, what tensions arise, and what enables part‑time leadership.</p>
+          <p>A qualitative design using semi‑structured interviews with fifteen part‑time school leaders captured career journeys, role expectations and barriers. Analysis was guided by Bronfenbrenner’s Ecological Systems Theory and employed content and constant comparative techniques; researchers conducted vertical and horizontal analyses, independently developed thematic master lists, reconciled differences by consensus and quantified themes across ecological levels.</p>
+          <p>Findings mapped to microsystem (workplace relationships and senior attitudes), mesosystem (home–work boundary negotiations and time pressures), exosystem (institutional policies expecting parity with full‑time duties), macrosystem (cultural norms, gendered caregiving expectations) and chronosystem (labour‑market changes and teacher shortages). The ecological lens elucidates how layered influences restrict or enable part‑time leadership, helps explain gendered representation in senior roles and offers timely evidence for equitable workforce planning and flexible leadership arrangements and recommendations for implementation in schools nationally.</p>
+        </div>
+      </details>
+
+      <details class="abstract-item">
+        <summary>Zero sum game? How does school leaders strategically manage resources within a resource constrained environment?</summary>
+        <div class="abstract-authors">Stanley Koh, A/Prof Jenny Chesters, Dr Donnie Adams, Ms Natalie Calleja, Ms Dee Groves</div>
+        <div class="abstract-body">
+          <p>School leadership matters greatly in securing better organisational and student outcomes (Leithwood et al., 2023). The main responsibility of school leaders is to provide for students’ needs, balance competing demands and keep spending within budget allocations. The ability to acquire and use resources strategically is particularly critical in jurisdictions like Victoria, where government schools frequently operate in resource constrained environments yet retain discretion over local resource use (Keddie et al., 2022).</p>
+          <p>This mixed methods study investigates how school leaders in Victorian government schools strategically manage resources to achieve school success consistent with the “growth state” or “development phase” of the school. We conducted semi‑structured interviews with school principals. Our interviews were guided by our analysis of ACARA school profile and finance data; school annual reports; school improvement plans; annual implementation plans; and other relevant documents.</p>
+          <p>This paper presents preliminary findings on the leadership practices and complex decision‑making processes that school leaders employ to prioritise competing demands, and to acquire and deploy resources strategically to maximise educational opportunities and outcomes for their school communities. Drawing on these insights, the paper offers recommendations to strengthen principals’ professional practice in strategic resource management, encompassing initial leadership training and preparation for aspiring principals, and ongoing professional development for serving principals.</p>
+        </div>
+      </details>
+
+      <details class="abstract-item">
+        <summary>The importance of school structure and culture in ways senior leaders support middle leader success</summary>
+        <div class="abstract-authors">Caitlin Lamont, David Gurr, Lawrie Drysdale</div>
+        <div class="abstract-body">
+          <p>It is well established that middle leaders require the support of senior leaders in order to successfully fulfil the requirements of their role and to undertake leadership responsibilities. This presentation examines case study research which revealed that both school structural elements and school culture shaped by senior leaders facilitated middle leader success.</p>
+          <p>In the case school, a regional Victorian multi‑campus K‑12 school, nine middle leaders reported that structural elements including organisational chart and role design and geographical features of the Year 9‑12 campus contributed to ways senior leaders supported the work and initiatives of middle leaders. Further, school cultural expectations consistently promoted by senior leaders allowed middle leaders to understand that they had autonomy in the way they enacted their leadership role and affirmed values‑based decision‑making at middle leadership level.</p>
+          <p>Four senior leaders at the case school shared an understanding of what continuous improvement looked like at this school and ways that middle leaders were both drivers and contributors to this. This shared understanding provided insight into ways that school culture was enacted through senior leader practice in order to promote successful middle leadership across curriculum, wellbeing, and specialist domains.</p>
+        </div>
+      </details>
+
+      <details class="abstract-item">
+        <summary>The champion paradox: Reconsidering the role of individuals in the long-term sustainment of programs and practice</summary>
+        <div class="abstract-authors">Hannah Stark, Jane Page</div>
+        <div class="abstract-body">
+          <p>Evidence‑informed pedagogical approaches that prioritise rich adult–child interaction, such as the Abecedarian Approach Australia (3a), are associated with benefits for young children's language, cognitive and social‑emotional development, particularly in communities experiencing social and educational inequity. Sustaining such approaches in early childhood education and care (ECEC) is challenging, and many organisations rely on individual "champions" to carry this work.</p>
+          <p>This multiple case study examined how champions influence organisational capacity to sustain 3a implementation over ten or more years across three Australian organisations. Semi‑structured interviews were conducted with 25 senior leaders, program managers, educational leaders, practitioners, policymakers and researchers, and analysed using a critical realist approach.</p>
+          <p>Findings identify a "champion paradox": the same characteristics that make champions effective in driving high‑quality practice also generate vulnerabilities that threaten its long‑term sustainment. Three interconnected mechanisms were identified: knowledge concentration, dependency creation and system capacity prevention. These dynamics have direct implications for children's access to high‑quality practice, as consistent, intentional interactional pedagogy becomes contingent on individual educators rather than guaranteed through organisational systems. Implications for ECEC policy, leadership and system design will be discussed.</p>
+        </div>
+      </details>
+    </div>
+
+
+    <!-- Parallel Session 1.2 -->
+    <div id="abstracts-ps1-2" class="abstract-session group-1">
+      <div class="abstract-session-header">
+        <h3>Parallel Session 1.2 &mdash; From Pre‑Service to Expert Teacher</h3>
+        <span class="room">Room 218 KLD</span>
+      </div>
+      <p class="back-link small">
+        <a href="#parallel-session-1">&larr; Back to Parallel Session 1 schedule</a>
+      </p>
+
+      <details class="abstract-item">
+        <summary>Navigating Praxis Shock in Early Career Teaching</summary>
+        <div class="abstract-authors">Abbey Boyer</div>
+        <div class="abstract-body">
+          <p>Praxis shock can occur at any time during a teacher’s career but is most commonly documented with early career teachers, risking disillusionment, burnout and high attrition. This paper focuses on how early career teachers experience and navigate praxis shock, and on the specific elements of practical teacher work for which they feel underprepared.</p>
+          <p>The study involves six early career teachers and six mentor teachers. Early career teachers submitted video diaries documenting teaching experiences, mentoring support and how their learnings from ITE are conceptualised in practice. All participants then engaged in one‑to‑one semi‑structured interviews. The data are analysed using the Theory of Practice Architectures to examine how cultural‑discursive, material‑economic and social‑political arrangements enable and constrain early career teaching.</p>
+          <p>This analysis explores the disconnect between ITE and school settings, particularly around routine but complex aspects of teacher work such as classroom management, assessment, administrative demands and relational labour. I argue that the transition from ITE into teaching should be conceptualised not as a deficit in individual teachers, but as a structural phenomenon shaped by the practice architectures, the cultural‑discursive, material‑economic and social‑political arrangements that constitute early career teachers’ work.</p>
+        </div>
+      </details>
+
+      <details class="abstract-item">
+        <summary>Best Practices for Synchronous Online Intensive Learning (SOIL) in ITE</summary>
+        <div class="abstract-authors">Emma Stevenson, Merryn Dawborn-Gundlach, Kristen Hebden, Chloe Nelson </div>
+        <div class="abstract-body">
+          <p>This presentation draws on a qualitative study of a synchronous online intensive learning (SOIL) initial teacher education (ITE) program. Teacher Educators shared evidence based practices and practical recommendations for design and implementation.</p>
+          <p>Using interviews (n=9) and surveys (n=8) with teacher educators, thematic analysis identified three interrelated practices perceived as most supportive. First, diverse approaches to learning to be a teacher: multimodal activities, role play, off screen hands on tasks, including the strategic use of breakout rooms to foster choice and community. Second, working in shared digital platforms (OneNote, Miro, Google Slides, Padlet) to practise teaching, enable real time feedback, tutor monitoring and development of teaching artefacts. Third, preparing PSTs for online participation through platform orientation, leveraging pre existing rapport and logistical preparation. </p>
+          <p>The presentation will illustrate these practices with concrete examples, explaining how temporal pacing and frequent activity variation mitigate fatigue and sustain engagement while supporting activities needed for preservice teacher learning. We highlight the pedagogical and technical demands on teacher educators, outlining institutional implications, including platform selection, workload recognition and targeted professional learning. Finally, we will propose directions for research on PST outcomes and transferability across contexts and offer actionable design principles and facilitation strategies.</p>
+        </div>
+      </details>
+
+      <details class="abstract-item">
+        <summary>Cultivating Hope and Possibility Through Reciprocal Professional Learning </summary>
+        <div class="abstract-authors">Pip Robinson, Ana Ward-Davies  </div>
+        <div class="abstract-body">
+          <p>The Professional Learning Capstone was initially designed as a response to the need for graduate teachers to become “more informed and resilient” and to develop greater sustainability as teachers in schools (Robinson, 2025, p. 182). Through a year-long, self-directed inquiry using self-study methodology (Samaras, 2011), students critically reflect on their teaching practice, developing the dispositions and practices that enable them to remain intellectually and practically engaged with their work. </p>
+          <p>This presentation considers what happens when this individually oriented inquiry becomes a collective encounter through the Capstone’s student-led conference. At the conference, students share their inquiries with peers, respond to one another’s’ work and participate in reciprocal professional learning. While the conference was conceived as an opportunity to communicate findings and receive feedback on their inquiries, students describe being excited by their peers’ work and learning new approaches to teaching with renewed enthusiasm for the profession.</p>
+          <p>We explore the conference as a pedagogical condition through which hope can emerge relationally. Rather than positioning hope as an individual disposition, we ask how the reciprocal sharing of professional inquiry enables pre-service teachers to encounter new possibilities for teaching and for themselves within the profession. What happens when a pedagogical response designed to sustain teachers becomes a space in which teachers encounter reasons to be hopeful about teaching?</p>
+        </div>
+      </details>
+
+            <details class="abstract-item">
+        <summary>Learning from machine learning: An exploratory study of teacher in‑the‑moment decision‑making and noticing incorporating computer vision as an analytical tool</summary>
+        <div class="abstract-authors">Man Ching Esther Chan, Shu Jun Lee, Sachith Seneviratne, Emma Every</div>
+        <div class="abstract-body">
+          <p>In this presentation, we report on the Teacher Decision Cue Project (TDCP) pilot study, a collaboration between Melbourne University and RMIT University involving a multidisciplinary team (Psychology, Education, and Computer Science). The study investigates how expert teachers make decisions during classroom teaching through an innovative combination of qualitative and computational methods.</p>
+          <p>Using multiple video cameras, including head-mounted ones worn by the instructors, we captured a single workshop co-taught by two lecturers to 13 initial teacher education students. We then conducted separate post-lesson interviews with the instructors showing them the lesson footage to understand their decision-making process during teaching.</p>
+          <p>The interviews were analysed qualitatively to identify decision cues (for example, students’ body language and facial expression) that the instructors drew upon when making decisions mid-lesson. Computer vision involving machine learning was subsequently used to model the decision cues to quantify their occurrence and salience. Importantly, the analysis distinguished between aspects of teaching and decision-making that are amenable to quantitative modelling and those that cannot be readily modelled. We reflect on our experience in this analytical process to generate discussion about the potential and limitations of computer vision in investigating teacher decision-making and noticing.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- Parallel Session 1.3 -->
+    <div id="abstracts-ps1-3" class="abstract-session group-1">
+      <div class="abstract-session-header">
+        <h3>Parallel Session 1.3 &mdash; Community, Culture and Participatory Educational Histories</h3>
+        <span class="room">Room 417 KLD</span>
+      </div>
+      <p class="back-link small">
+        <a href="#parallel-session-1">&larr; Back to Parallel Session 1 schedule</a>
+      </p>
+
+      <details class="abstract-item">
+        <summary>A tale of children’s ‘amader apa’ (our sister): the application of ‘reflexive rapport’ in a participatory ethnography with children living in a slum in Bangladesh</summary>
+        <div class="abstract-authors"Rosie Yasmin </div>
+        <div class="abstract-body">
+          <p>Rapport-building and reflexivity play critical roles in achieving ethical decision-making in ethnographic fieldwork. While a plethora of publications is dedicated to explaining them separately, very little is known about how ethnographers maintain reciprocity between rapport-building and reflexivity. To this end, I critically evaluate the literature, and, by utilising the stage model of rapport-building (Pitts and Miller-Day 2007) and the variants of reflexivity (Finlay 2002), I propose a conceptual and analytical framework—‘reflexive rapport’.</p>
+          <p>Drawing on my PhD fieldwork employing participatory ethnography with children living in a Bangladeshi slum, I maintain that in such fieldwork ‘reflexive rapport’ can be an effective guiding tool in building respectful and trustworthy relationships with participants, relationships in which rapport-building and reflexivity represent mutual and complementary processes. Researcher-participant relationships are entangled with contextual and circumstantial nuances associated with class, power structures, gender, and locale. In this context, I explain how, through multiple, shifting positions and negotiated interactions with the children, I became an ‘insider’—children’s “amader apa” (our sister). This chapter contributes to a growing body of literature on the conduct of ethical fieldwork, particularly with children from the margins of society. </p>
+        </div>
+      </details>
+      <details class="abstract-item">
+        <summary>Cultural studies goes (back) to school (and to uni and Canberra and&hellip;)</summary>
+         <div class="abstract-authors">Natalie Hendry</div>
+         <div class="abstract-body">
+          <p>In 1994, David Buckingham and Julian Sefton-Green published <em>Cultural Studies Goes to School</em>, compiling four years of research into how young people engage with popular culture and mass media in and out of schooling. Popular media have of course since shifted: from broadcast or mass media, to early internet and then social media cultures, to now an increasingly fragmented media environment of legacy media outlets, commercial platforms, and algorithmically-driven parasocial media cultures.</p>
+          <p>Even so, I return to this text (and the broader cultural studies tradition) to argue for the value of cultural studies to guide how we understand, teach and engage with digital media in education, research and policy initiatives. To do this, the presentation offers examples from two ongoing projects: Australia&rsquo;s National Media Literacy Strategy (in collaboration with Alex Bacalja, Eric Fu and others), and a critical mental health and education project that extends my work exploring digital mental health cultures. I suggest that cultural studies can offer us hope and direction for theorising but also responding to the complex digital media challenges our communities encounter.</p>
+         </div>
+      </details>
+
+      <details class="abstract-item">
+       <summary>Culturally grounded pedagogies in sport and coaching education: A scoping review</summary>
+        <div class="abstract-authors">Carla Luguetti, Ramon Spaaij, Karen Block, Karen Farquharson, Aish Ravi and Hayley Truskewycz</div>
+        <div class="abstract-body">
+         <p>In this paper, we introduce culturally grounded pedagogies as an umbrella concept that brings together approaches variously described in the literature as culturally relevant, culturally responsive, culturally sustaining, culturally safe, and related terms. These pedagogies recognise, value, and build upon the cultural identities, knowledges, values, languages, and lived experiences of young people, positioning culture as relational, dynamic, and central to learning.</p>
+          <p>This study presents a scoping review that aims to map the existing literature on culturally grounded pedagogies in sport and coaching education, examining how these approaches have been conceptualised, theorised, and enacted, the insights of their implementation, while also identifying gaps in existing knowledge to guide future research and practice. Following the PRISMA-ScR checklist, studies were included based on the following criteria: full-text, empirical studies between 2020 and 2026, and accessed through Academic Search Complete, Education Database (ProQuest), Education Source (EBSCO), ERIC (EBSCO), Scopus, and SPORTDiscus (EBSCO). In total, 284 articles were considered for full-text review, with 21 articles moving to data extraction after having met the study&rsquo;s inclusion criteria.</p>
+          <p>Findings revealed that while these pedagogies are articulated differently, they share commitments, including an explicit attention to power and inequality, an acknowledgement of cultures, racism, and colonial histories in sport, a valuing of young people&rsquo;s lived experiences and relational knowledge, and a strong emphasis on reflexivity in pedagogical practice.</p>
+       </div>
+     </details>
+
+      <details class="abstract-item">
+        <summary>Oral histories with communities: Understanding education change</summary>
+        <div class="abstract-authors">Sophie Rudolph, Fiza Mohd Zali, Timothy Delany, Natalie Calleja, Stephen Chatelier and Carla Luguetti</div>
+        <div class="abstract-body">
+          <p>This project aimed to work with youth and education community organisations to understand how historical awareness and narratives enable opportunities for addressing present problems and imagining different futures. Drawing on &ldquo;history from below&rdquo; (Myers &amp; Grosvenor, 2018), critical solidarities, and decolonial research, it adopted a participatory, community-engaged approach (Bourassa, 2021; Gawerc, 2021).</p>
+          <p>An oral history workshop brought together 13 participants from six youth and education community organisations in Melbourne. Through facilitated mapping and storytelling activities, participants reflected on organisational histories, educational and social change, and possibilities for the future. Initial findings highlighted the value of collective reflection and exchange, with participants identifying shared struggles and emerging forms of solidarity across organisations.</p>
+         <p>The workshop expanded understandings of oral history, with several organisations recognising that they were already undertaking oral history through documentaries and other community practices. Discussions also revealed how organisational histories could be lost through decisions about what was archived and remembered, highlighting the relationship between memory, power, and knowledge politics. Sharing stories made experiences of structural domination visible while creating opportunities to recognise common struggles. The workshop explored how oral history could strengthen community agency, foster solidarity, and support more equitable educational futures.</p>
+    </div>
+  </details>
+</div>
+
+
+    </div>      
+<!-- Parallel Session 1.4 -->
+<div id="abstracts-ps1-4" class="abstract-session group-1">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 1.4 &mdash; Artful, Creative Pedagogies of Hope and Relation</h3>
+    <span class="room">Room 419 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-1">&larr; Back to Parallel Session 1 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Creative, relational and reciprocal research into intergenerational arts learning</summary>
+    <div class="abstract-authors">Marnee Watkins, Dr Sue Arney, Dr Jennifer Andersen</div>
+    <div class="abstract-body">
+      <p>This research emerged from speculative wondering about the perceptions of our University&rsquo;s undergraduates engaging with primary school children in Education Breadth arts based encounters, and implications for other areas of tertiary education. Our Faculty-funded two year (2025&ndash;26) research has drawn on a constructivist orientation with multiple forms of arts-based data generation to gain understandings of how such interactions have reframed the tertiary students&rsquo; understandings of children, self, creativity, learning, pedagogy and relationality.</p>
+      <p>This year the arts based dimension of Phase Two extended the storied narrative data from Phase One to enable participants time to voice their thinking through dialogue, performative practices, creative documentation and multimodal outputs. This allowed us to delve more deeply into their experiences and perceptions, to add nuance and subtlety to our findings, and to reveal the reciprocal benefits of the research for our teaching and identity as arts educators.</p>
+      <p>Emerging themes include: appreciation for children's creativity; new views of children reshaping adults; own changed sense of being creative and playful; affirmation for playful, embodied learning; and collaborative intergenerational play for reigniting creativity. We envisage new knowledge to the field of tertiary learning and the interactive learning young people have at University for meaningful and transformative engagement.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Artful ways of being an Educator: living, writing and teaching hopefully, ethically, radically</summary>
+    <div class="abstract-authors">Jack Tan</div>
+    <div class="abstract-body">
+      <p>In this paper, I present my pedagogical practice as a culturally and linguistically diverse (CALD) educator working with similarly CALD students in TESOL and Creative Writing at our University. Being migrant, mobile and multicultural enable us to reflect and write creative-critically about our lived experiences as we move in our educational spaces.</p>
+      <p>These are ethical practices of valuing our multiple funds of knowledges as we negotiate our shifting educational landscape. These are also aesthetic acts of sharing and playing with our multilingual and multicultural resources, which include our languages, practices and beliefs. My method for this work is through autoethnographic poetic inquiry on pedagogical experiences. I have written about this practice as &ldquo;artful ways of being an educator&rdquo; (Tan, 2026), advocating for us to teach and write generously, ethically and aesthetically.</p>
+      <p>My aim in this conference paper is to share these aesthetic educational practices relevant to our work within our large University, consisting of diverse educators and students.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Improvising Hope: An experienced improvising artist creating hope, and practising to facilitate it for others.</summary>
+    <div class="abstract-authors">Catherine Ryan, Prof Kylie Smith, Dr Prue Wales</div>
+    <div class="abstract-body">
+      <p>My research asks: 1. How do improvisational theatre practitioners use their practice to develop and sustain relationships of care with young people?; and 2. What role can improvisation play in developing and sustaining relationships of care? Improvising and caring are relational practices, described as responsive exchanges or flows of states of being, roles, actions and affects along with ethical intentions and consequences.</p>
+      <p>Hope, generated through creative improvising practice, and shared through theatre-making facilitation with youth, is a major theme for one study participant. It&rsquo;s grounded in their reflections on uncertainty, chaos, mistakes, possibilities, transformation and care. This presentation shares their reflections, and my thinking with them, alongside Gallagher and Kushnir&rsquo;s (2022) <em>Hope in a collapsing world: youth, theatre and listening as a political alternative</em>.</p>
+      <p>Hope is debated in philosophical, psychological, religious/spiritual and political terms, considered a practice and state of being. It&rsquo;s at play in varying conscious and unconscious purposes and consequences &ndash; including to sustain, motivate, care, fight and control. I try to live and work de/anti-colonially, as an uninvited guest, a white settler descendant living and working on Dja Dja Wurrung, Wurundjeri Woi-Wurrung and Bunurong Countries. So I&rsquo;m following the conference&rsquo;s &ldquo;radical&rdquo; take on acts of hope as I also think alongside Chelsea Watego&rsquo;s (2021) <em>fuck hope</em> and Jonathan Lear&rsquo;s (2008) <em>Radical Hope: ethics in the face of cultural devastation</em>.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Dialogic Interactions of Education Students with Australian Picture Books</summary>
+    <div class="abstract-authors">Helen Cozmescu, Dr Hyejeong Ahn</div>
+    <div class="abstract-body">
+      <p>This study explores how picture books can support culturally responsive, dialogic and critically conscious learning in teacher education. Situated within an Australian university context, the research investigates how education students from diverse cultural and linguistic backgrounds interpret and discuss contemporary Australian picture books, and how these interactions shape understandings of culture, identity, belonging and difference.</p>
+      <p>Drawing on Freirean perspectives on dialogue, critical consciousness and the relationship between reading the word and reading the world, the study positions picture books as multimodal texts through which students can interrogate assumptions, encounter alternative perspectives and connect textual meanings with their lived experiences.</p>
+      <p>The study involves Master of Education and Master of TESOL students engaging collaboratively with selected Australian picture books, followed by facilitated dialogic discussions and reflective activities. Analysis examines how students draw on their cultural and linguistic resources, negotiate competing interpretations, question taken-for-granted assumptions and develop new understandings through dialogue.</p>
+      <p>Emerging findings suggest that picture books can function as spaces for critical encounters, enabling students to make connections between textual representations and broader social, cultural and historical contexts. The study demonstrates that picture books, when accompanied by intentional Freirean-inspired pedagogy, can move beyond developing cultural awareness towards fostering critical, dialogic and transformative approaches to teacher education.</p>
+    </div>
+  </details>
+</div>
+
+<!-- Parallel Session 1.5 -->
+<div id="abstracts-ps1-5" class="abstract-session group-1">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 1.5 &mdash; Connecting Voices: Creative Approaches to Wellbeing and Professional Learning</h3>
+    <span class="room">Room 421 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-1">&larr; Back to Parallel Session 1 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Resilience, creativity and the ukulele: Exploring a melody-first approach to learning the ukulele for musician-teachers living with chronic illness</summary>
+    <div class="abstract-authors">Fiona M. King</div>
+    <div class="abstract-body">
+      <p>Ukulele learners often start with chords and singing, yet this familiar pathway may not suit all players. This study examines the experiences of musician-teachers living with chronic illness as they engage with the C Major Method, a melody-first &lsquo;fingerstyle&rsquo; approach for ukulele playing that foregrounds improvised melody for instrumental learning, sustained musicianship and creative expression.</p>
+      <p>The research design is a qualitative collective intrinsic case study that involves three cases: interviews with another learner of the method (Case 1), the researcher&rsquo;s longitudinal practitioner inquiry reflections and compositions (Case 2), and a three-lesson teaching sequence pilot with an adult musician-teacher (Case 3). Data are analysed thematically across the cases.</p>
+      <p>The study explores concepts of resilience and creativity in the ways musicians learn and engage with the method and explore their musicianship alongside health challenges. Initial findings may provide insight into more inclusive possibilities for ukulele teaching and learning.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Voices Across Cultures: Exploring Young Adult Students’ Wellbeing Communication</summary>
+    <div class="abstract-authors">Jacqui Francis, Sue Salamito</div>
+    <div class="abstract-body">
+      <p>How young adults communicate for wellbeing remains poorly understood, particularly across cultures. This matters for 16&ndash;24 year olds, among whom mental disorders are most prevalent. Understanding these everyday interactions can inform culturally responsive, strengths-based wellbeing literacy and interventions. We asked: How do young adults communicate for and about wellbeing? How do culture and international or domestic student status shape this communication?</p>
+      <p>N=40 Australian and N=40 Malaysian university students aged 18 to 25 years participated, including domestic and international students. Using the Ecological Momentary Assessment (EMA) participants received a daily prompt via mobile phone or email for 7 days to report interactions that enhanced their wellbeing, what each person said or did, and the communication modes used. Follow up interviews with 17 EMA participants explored reflections on completing the EMA. Responses were coded for who, what and how participants communicated for wellbeing.</p>
+      <p>Most participants (63%) reported interactions that enhanced their wellbeing. Friends, followed by family, were the most frequent sources. Participants commonly described feeling connected; with interactions occurring mostly in-person through everyday exchanges, such as &lsquo;shared plans about the day&rsquo;. Patterns varied across country and domestic/international student status.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Experiencing Agency: Teachers’ Capacities within Professional Learning Communities</summary>
+    <div class="abstract-authors">Emma Stevenson, Mark Selkrig and Catherine Smith</div>
+    <div class="abstract-body">
+      <p>Professional Learning Communities (PLCs) are compulsory in Victorian government secondary schools as mechanisms for improving teaching practice and student learning. Concurrently, there is growing recognition of the role of teacher agency in school improvement outcomes. While teacher experiences of PLCs have been considered through school improvement lenses, the lived experiences of teacher agency in PLCs remain under-explored. In this presentation I examine how Victorian government secondary school teachers describe and understand their agency within PLCs.</p>
+      <p>Drawing on a constructivist phenomenological approach informed by Priestley et al.&rsquo;s ecological model of agency, I draw on data from a multimethod research design involving 57 teachers. Based on this cohort&rsquo;s responses, I argue that teacher agency within PLCs cannot be understood solely as an individual capacity or as a product of organisational structures. Instead, teachers conceptualise agency as ecologically situated and continually negotiated through the interplay of mandates, professional beliefs, organisation structures and collaborative communities.</p>
+      <p>Framed by the conference theme, this study highlights how teachers enact resilient practices, reciprocal professional relationships and professional judgements. Implications suggest that teacher agency requires attention to policy enactment, professional culture and the relational conditions of PLCs. Through agency hope becomes a radical act: creating and sustaining possibilities for professional practice.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>A change agent turn in the a/r/tographic rhizome.</summary>
+    <div class="abstract-authors">Cory Dal Ponte, Kathryn Coleman, Eduardo Oliveira, Elizabeth Molloy</div>
+    <div class="abstract-body">
+      <p>The value of cognitive labour and higher education are being reshaped by generative AI, yet the university still imagines itself as a world-class, ranked and datafied institution whose purpose is to create reproducible cognitive capitalists. This thesis with creative work uses ca/r/tography, a change agent turn to a/r/tography, and autoethnography as a living inquiry to tell the story of higher education change-making in the age of GenAI.</p>
+      <p>It asks what futures become possible when we deterritorialise the current siloed, reproducible, and datafied approach to undergraduate education? Grounded in Deleuzoguattarian assemblage, I collaborate with human/non-human to create renderings across clay, code, image, text and institution. The culminating creative work is a gallery exhibition, immersing visitors in a speculative, protopian undergraduate degree experience and inviting them to map their own resonant futures.</p>
+      <p>The exhibition and renderings become speculative provocations to reconsider what the university values, whom it serves and what it makes possible.</p>
+    </div>
+  </details>
+</div>
+
+<!-- Parallel Session 2.1 -->
+<div id="abstracts-ps2-1" class="abstract-session group-2">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 2.1 &mdash; Hope, Mindfulness and Wellbeing Across the Lifespan</h3>
+    <span class="room">Room 217 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-2">&larr; Back to Parallel Session 2 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Beyond Attention and Awareness: Re-examining Mindfulness Through Experienced Practitioners’ Understandings</summary>
+    <div class="abstract-authors">Olivia Zhang, A/Prof. Gavin Slemp, Prof. Dianne Vella-Brodrick, Dr. Lara Mossman</div>
+    <div class="abstract-body">
+      <p>Despite widespread use of mindfulness in psychological research and practice, its conceptual boundaries remain contested. Psychological definitions have often foregrounded present-moment attention and awareness, while giving variable emphasis to the qualities that shape how experience is approached.</p>
+      <p>This presentation reports emerging findings from a qualitative study examining how mindfulness is understood through sustained practice. Semi-structured interviews with 27 experienced mindfulness practitioners, each with at least four years of practice, explored the qualities and ways of relating that they associate with mindfulness. Data are analysed using reflexive thematic analysis within a contextualist framework.</p>
+      <p>Emerging findings suggest that practitioners conceptualise mindfulness not only in terms of awareness, but also through particular ways of relating to experience, including acceptance, non-judgment, equanimity, non-reactivity, letting go, and compassion. Clarifying these qualities may support more comprehensive conceptualisation of mindfulness, its measurement and application, with particular relevance to educational contexts in which mindfulness is used to support the wellbeing and development of students and educators.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Conceptualisations and Experiences of Hope in Children and Adolescents: A Systematic Review</summary>
+    <div class="abstract-authors">Liang Borlagdan-Sevilla, Dianne Vella-Brodrick, Rachel Colla, Dan Loton</div>
+    <div class="abstract-body">
+      <p>Within positive psychology, there is robust evidence linking hope to wellbeing outcomes among children and adolescents. Most existing research, however, operationalises and measures hope using Snyder&rsquo;s (1991, 1997) Hope Theory and its corresponding scales. While such quantitative studies highlight the value of hope, there is a need to incorporate young people's own perspectives to deepen understanding of how they conceptualise and experience hope.</p>
+      <p>This systematic review synthesises findings from 29 qualitative studies exploring hope in children and adolescents aged 8&ndash;18. Following PRISMA guidelines, studies were identified from five education and psychology databases and critically appraised for quality. Results indicate that young people&rsquo;s hope experiences reflect their unique contexts, particularly among disadvantaged or vulnerable groups. Age-related differences in hope conceptualisations also provide insight into the developmental nature of hope.</p>
+      <p>Notably, young people described several relational and contextual aspects of hope that are not captured in most quantitative hope studies. The diversity and depth of findings highlight the complexity of hope and the importance of qualitative hope research in this age group. By consolidating young people&rsquo;s perspectives, this review can contribute to the development of more contextually relevant hope interventions and educational practices that can enhance wellbeing across diverse youth populations.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>A Needs Assessment of a Life Crafting Intervention to Promote Wellbeing of Older Chinese Adults</summary>
+    <div class="abstract-authors">Yue Pan, Dianne Vella-Brodrick, Gavin Slemp, Yukun Zhao</div>
+    <div class="abstract-body">
+      <p>Life crafting refers to the proactive process of shaping one&rsquo;s life across various domains to enhance meaning and wellbeing. While existing life crafting interventions have primarily focused on younger populations, their potential in later life remains underexplored.</p>
+      <p>Drawing on positive psychology and gerontology, this study examines the perceived need and value of a novel and culturally adapted life crafting intervention designed to promote meaning in life and wellbeing among Chinese older adults. The intervention integrates reminiscence-based life review, life crafting, goal setting, and Chinese cultural elements with practical strategies for wellbeing in later lives.</p>
+      <p>We conducted individual interviews with 30 older Chinese adults (aged 50+), and two focus groups with relevant stakeholders such as carers, social workers, and elder care staff. Participants reviewed an initial intervention prototype and reflected on wellbeing, values and goals. Using vignettes, participants reflected on how the intervention might support meaning-making and wellbeing.</p>
+      <p>Thematic analysis using a hybrid inductive&ndash;deductive approach identified key insights on perceived need, relevance, and delivery preferences. Initial findings support the need, relevance and value of the intervention, particularly around life transitions such as retirement. Participants valued the sensitive integration of Chinese traditions. These insights highlight the promise of a culturally grounded life crafting approach and will inform forthcoming co-design workshops and pilot testing to refine and evaluate the intervention.</p>
+    </div>
+  </details>
+</div>
+
+<!-- Parallel Session 2.2 -->
+<div id="abstracts-ps2-2" class="abstract-session group-2">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 2.2 &mdash; Voice, Identity and Relational Pedagogies Across Contexts</h3>
+    <span class="room">Room 218 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-2">&larr; Back to Parallel Session 2 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Advancing Indigenous research student success: the role of relational pedagogies</summary>
+    <div class="abstract-authors">Justin Wilkey, Sarah French</div>
+    <div class="abstract-body">
+      <p>This paper argues that relational pedagogies are critical to supporting the success of Indigenous Higher Degree by Research students and Early Career Researchers in Australian higher education. Indigenous HDR completions remain concerningly low, yet simply increasing access to programmes for Indigenous people does not translate to significant growth in attainment.</p>
+      <p>Rather, institutions need to improve retention strategies by better tailoring their programmes to incorporate Indigenous knowledges and worldviews. We examine two programme-level initiatives delivered by the Faculty of Education at the University of Melbourne that employ a relational approach and centre Indigenous research principles.</p>
+      <p>Drawing on qualitative data collected in interviews with staff and students, we explore the critical role that relational pedagogies play in fostering relationships among students, between students and educators, and between students and the course content. We conclude that relational pedagogies have a proven impact on Indigenous research student retainment and success. Our findings have important implications for the development of further university programmes for Indigenous students which are needed not only to benefit students but to expand institutional knowledge production and grow Indigenous research and leadership capacity in higher education.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Who is the child? Consulting, listening, and learning with children in education research</summary>
+    <div class="abstract-authors">Louise Couceiro</div>
+    <div class="abstract-body">
+      <p>Any hope of changing, advancing, or reimagining education must begin with the people who are living it &ndash; &lsquo;it makes no sense not to consult, listen to and learn from those who constitute the vast majority of &ldquo;stakeholders&rdquo; in any education system&rsquo; (Brown 2025). In the context of schooling, the vast majority of stakeholders are of course children and young people.</p>
+      <p>But what does it mean to meaningfully consult with, listen to, and learn from children? Drawing on the sociology of childhood, child rights, and youth studies scholarship, this presentation explores this question by grappling with adjacent issues concerning methodologies, ways of knowing, and whose knowledges are valued &ndash; or not &ndash; as &lsquo;evidence&rsquo; in education policy and practice.</p>
+      <p>This line of enquiry brings into focus a more critical question: who is the child with whom we imagine consulting, listening to and learning from? Although it has long been established that children are social actors with situated expertise, the extent to which this recognition informs education research varies considerably. When children are framed narrowly, perhaps as adults in waiting or as passive recipients of instruction, the scope for meaningful engagement is similarly narrowed. Recognising children as knowledgeable is therefore essential for expanding what consultation, listening, and learning can be within education research.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Gendered Subjectivities of Chinese Haigui Women</summary>
+    <div class="abstract-authors">Suowa Zhang, Dr. Quentin Maire, Dr. Natalie Hendry, Dr. Eric Fu</div>
+    <div class="abstract-body">
+      <p>Every year, more than half a million Chinese students study abroad and return, making China one of the largest international student-contributing countries (Ministry of Education of the People&rsquo;s Republic of China [MOE], 2023). Among these students, the number of women has always been slightly higher than that of men (MOE, 2023).</p>
+      <p>Upon their return, these women usually face a paradoxical gender environment that facilitates further subjectivity and identity negotiation. This situation highlights the importance of exploring the tensions and contestations between the mobility-transformed gender experiences and domestic gender norms, ideologies, and stereotypes for Chinese haigui (overseas study returnee) women.</p>
+      <p>Using an ethnographic approach, this research explores Chinese haigui women&rsquo;s negotiations of gendered subjectivity. It aims to examine the significance of transnational education mobility for Chinese haigui women and how it influences their perceptions, beliefs, and behaviours when they encounter dominant gender discourses and ideologies.</p>
+      <p>Iterative observations, interviews, and media analysis will be conducted to collect qualitative data on Chinese haigui women&rsquo;s subjective reflections of gendered selves. In doing so, it will develop a new understanding of the lived experience of Chinese haigui.</p>
+    </div>
+  </details>
+</div>
+
+
+<!-- Parallel Session 2.3 -->
+<div id="abstracts-ps2-3" class="abstract-session group-2">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 2.3 &mdash; Pathways in Mathematics Learning: Numeracy, Achievement and Teacher Identity</h3>
+    <span class="room">Room 417 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-2">&larr; Back to Parallel Session 2 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Finger&ndash;Accuracy Data in Early Addition: Developmental Pathways, and Long-Term Maths Achievement</summary>
+    <div class="abstract-authors">Kelly Trezise, Robert Reeve, Brian Butterworth</div>
+    <div class="abstract-body">
+      <p>Finger use is a hallmark of early arithmetic, yet its relation to accuracy and later mathematical achievement is not fully understood. This talk presents two studies that combine accuracy and finger-use data in single-digit addition (SDA), using latent transition analysis (LTA) to identify developmental pathways from ages 5 to 8 and test their predictive validity for later mathematics skills.</p>
+      <p>Study 1 used a cross-sequential design and LTA to derive SDA profiles jointly defined by accuracy and finger use, and to model transitions between these profiles over time. Working memory, enumeration, finger gnosia, and non-symbolic comparison were examined as predictors of initial profile membership and subsequent transitions. Study 2 followed children longitudinally and applied the same LTA framework to SDA data, replicating the profile structure and transition patterns observed in Study 1.</p>
+      <p>Early profile membership and pathways were then used to predict multiplication, division, and fraction performance at age 10. Distinct finger&ndash;accuracy profiles showed differential relations with later outcomes, indicating that early SDA behaviour, captured through replicated latent profiles and pathways, provides a robust indicator of subsequent mathematical competence.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Low-performing upper-secondary mathematics students: Investigating values and motivation in a neglected field</summary>
+    <div class="abstract-authors">Justine Sakurai, Wee Tiong Seah, Max Stephens, Catherine Pearn</div>
+    <div class="abstract-body">
+      <p>Australian and international assessments show that many students aged 15 to 19 perform below numeracy proficiency benchmarks. Little is known about what motivates these students or their teachers, or what either group values in mathematics.</p>
+      <p>This study examined the conditions that support the teaching and learning of mathematics for low-performing upper-secondary students, and the extent with which teachers&rsquo; and students&rsquo; values correspond. The research was guided by person-oriented analysis, drawing on the work of Swedish psychologist Lars Bergman, which seeks to retain focus on individuals' unique patterns rather than averaged group data.</p>
+      <p>Classroom ethnography and interviews were analysed, using principal components analysis and clustering, with both solutions tested for stability. The values that emerged about motivation were relational. Students valued mathematical experiences in which they felt supported, recognised, and where the mathematics had genuine consequence for students&rsquo; lives. Five distinct student profiles were identified, each identifying the different conditions under which mathematics became reachable. Most importantly, value alignment between students and their teachers were associated with the quality of students' motivation.</p>
+      <p>These findings will support all teachers of low-performing upper-secondary students and the initial teacher education programmes that prepare them.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Cultivating Mathematics Teacher Identity: Supporting Pre-Service Teachers in Primary Education</summary>
+    <div class="abstract-authors">Jennifer Sze, Carmel Mesiti, Catherine Pearn, Kate Copping</div>
+    <div class="abstract-body">
+      <p>This project examines how pre-service teachers (PSTs) develop confidence and competence in teaching mathematics and how personal experiences and cultural-linguistic backgrounds shape their mathematics identity and classroom practice. Many PSTs enter teacher education with fragile self-concepts, anxiety or narrow views of mathematics. Less is known about which programme features intentionally reshape identities towards inclusive, empowering pedagogies.</p>
+      <p>The research asks: How do personal experiences, including linguistic and cultural backgrounds, shape PSTs&rsquo; mathematics identity, and what strategies effectively enhance confidence and promote inclusive teaching?</p>
+      <p>Framed by identity research linking learner self-concept to professional confidence and practice, the study explores how past schooling, achievement and social positioning interact with cultural and linguistic identity over time. A longitudinal mixed methods design uses surveys at programme commencement and near the end of year two to measure shifts in confidence, professional identity and inclusion orientation, followed by 20-minute interviews.</p>
+      <p>The anticipated outcomes will support improvements in curriculum design and teacher-education policy. In strengthening PSTs&rsquo; mathematics identity, this work aims to enhance future teachers&rsquo; confidence, enrich the learning experiences of students they will teach, and promote more equitable participation in mathematics across schooling contexts.</p>
+    </div>
+  </details>
+</div>
+
+<!-- Parallel Session 2.4 -->
+<div id="abstracts-ps2-4" class="abstract-session group-2">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 2.4 &mdash; Power, Voice and Agency in Contemporary Education</h3>
+    <span class="room">Room 419 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-2">&larr; Back to Parallel Session 2 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Melting the Iron Rice Bowl? Marketising Teacher Management through State Control in China</summary>
+    <div class="abstract-authors">Hanyue Zhong, Gosia Klatt, Eric Fu, Melyssa Fuqua</div>
+    <div class="abstract-body">
+      <p>This paper examines how teachers, as public employees, have undergone a series of changes in relation to Chinese traditional socialist employment regime after the market reform. Using critical discourse analysis, I analyse how two major teacher management reforms since the 2000s have essentially introduced two key elements in the making of a teacher labour market: competition and mobility.</p>
+      <p>These reforms are underpinned by a strong neoliberal framing that emphasises the enhancement of teacher quality as human capital and the efficient utilisation of the teacher workforce as human resources. This marketisation of teacher management holds two important consequences.</p>
+      <p>First, it conceptualises teachers as standardised, transferable, and replaceable technicians, weakening their professional and relational connections to particular schools and places. Second, it enables a particular policy problematisation that foregrounds uneven teacher resource allocation in understanding educational inequality, making efficiency an important means, or even a prerequisite, for improving educational equality.</p>
+      <p>The paper demonstrates how state control can work with, rather than against, the market mechanism, while reshaping the meaning and practice of educational equality.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Whose Voice? Hope, Agency, and Academic Becoming for Multilingual Students in the Age of AI</summary>
+    <div class="abstract-authors">Julie Choi, Melissa Jufenna Slamet, Hesaam Kashi</div>
+    <div class="abstract-body">
+      <p>Generative artificial intelligence (AI) is transforming how university students write, revise, and represent ideas. While much current discussion focuses on academic integrity and AI literacy, less attention has been paid to how AI shapes students' development as writers, scholars, and meaning-makers.</p>
+      <p>This presentation reports findings from a qualitative study of fifteen multilingual Master of TESOL students who engaged with AI and translation technologies within an arts-rich translanguaging curriculum. Drawing on multimodal projects, reflective writing, AI-use records, and interviews, the study examined how students negotiated voice, authorship, and judgement in AI-mediated writing.</p>
+      <p>Findings revealed that students exercised strong critical judgement when AI-generated content conflicted with their lived experiences, cultural knowledge, or multilingual expertise. However, AI was more readily trusted in areas where students were still developing academic confidence and disciplinary knowledge. Although AI often helped students produce stronger texts, it sometimes reduced opportunities for the productive struggle through which academic identities develop.</p>
+      <p>Framed through concepts of symbolic competence and academic becoming, the study offers a hopeful perspective on AI in higher education. Rather than passive users of technology, multilingual students emerged as active negotiators of meaning, demonstrating resilience, agency, and voice in rapidly changing educational landscapes.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Male teachers as change agents: Motivations for challenging masculinities</summary>
+    <div class="abstract-authors">Troy Potter, William Bingley</div>
+    <div class="abstract-body">
+      <p>Educators are increasingly having to navigate issues related to gender in their classrooms. This is particularly the case in relation to masculinities, and the impact online influencers are having on boys&rsquo; understanding of gender dynamics (Halliday, 2023; Will, 2023). While research has highlighted women teachers&rsquo; experience of misogyny and abuse (e.g. Roberts &amp; Wescott, 2024), further research into the role of male teachers is required.</p>
+      <p>This paper reports on preliminary data from a national study that examines the pedagogical practices of male-identifying teachers who intentionally challenge harmful forms of masculinities in their classroom. Specifically, I report on male-identifying teachers&rsquo; motivations for challenging masculinities, as well as the perceived support they experience within their schools.</p>
+      <p>Drawing on previous research highlighting the problematic nature of male role model discourse connected to a &ldquo;moral panic&rdquo; within education (Martino et al., 2009; Martino &amp; Kehler, 2006), I propose that male teachers should be viewed as agents of change, which requires understanding how and when they take up a disruptive practice of questioning normative masculinities.</p>
+      <p>I offer a preliminary analysis of interview data with Australian teachers to make sense of their experiences of enacting gender-just pedagogies, connecting these to broader structural and ideological matters, and research on critical masculinities studies and critical pedagogy. Understanding what motivates teachers, and how they are supported, can further enhance the ways all teachers respond critically and strategically to promote critical awareness and knowledge of gender inequities.</p>
+    </div>
+  </details>
+</div>
+
+<!-- Parallel Session 2.5 -->
+<div id="abstracts-ps2-5" class="abstract-session group-2">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 2.5 &mdash; Designing Educational Futures</h3>
+    <span class="room">Room 421 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-2">&larr; Back to Parallel Session 2 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Education for Sustainability in Teacher Education: A Comparative Study</summary>
+    <div class="abstract-authors">Rhonda Di Biase</div>
+    <div class="abstract-body">
+      <p>Education for Sustainability (EfS) is recognised as an important component of teacher education in response to the global climate crisis and need for environmentally responsible citizenship. Teacher education plays a pivotal role in preparing future teachers to integrate sustainability principles into their practice.</p>
+      <p>This study examines how EfS is incorporated into teacher education programmes in Fiji and the Maldives. Using an adapted version of Taylor et al.&rsquo;s (2007) survey, data were collected from 161 teacher education students at national universities in Fiji (n = 114) and the Maldives (n = 47).</p>
+      <p>Findings reveal strong support for EfS across both contexts. Most respondents expressed high levels of interest in sustainability, agreed that teachers have a responsibility to incorporate environmental education, and supported the inclusion of environmental studies within teacher education programmes.</p>
+      <p>However, important differences emerged between the two countries. Fijian respondents reported higher levels of environmental knowledge, confidence to teach EfS, perceived programme impact, and engagement in environmental action. In contrast, Maldivian respondents demonstrated strong commitment to sustainability but lower levels of confidence and preparedness to implement EfS in practice.</p>
+      <p>The study highlights the importance of embedding EfS through structured and practice-oriented approaches that build teacher confidence and competence.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>National subject associations and the state: A multiple case study exploring funding linkages between professional and political ecologies in physical education</summary>
+    <div class="abstract-authors">Ben Williams, Cameron Van der Smee, Leigh Sperka, Vaughan Cruickshank, and Nicki Taylor</div>
+    <div class="abstract-body">
+      <p>In this presentation, we share a selection of findings from a multiple case study of five national subject associations for physical education, focusing specifically on these associations&rsquo; relations with actors within the state. These findings are informed by an analysis that conceptualises the professions and politics as distinct yet linked ecologies, each with their own intra- and inter-ecological dynamics.</p>
+      <p>We generated our data through interviews and focus groups with paid and volunteer senior leaders of national physical education associations from Australia, Canada, New Zealand, the United Kingdom, and the United States, as well as via reviews of documents from these associations.</p>
+      <p>Through our analysis, we identify project-based funding as a common characteristic of these associations&rsquo; relations with actors in the political ecology and illustrate how such funding afforded the associations opportunities to do work they would have been otherwise unable to.</p>
+      <p>We also describe how their efforts to obtain funding were constrained by dissonant agendas among political actors and by the temporal rhythms and cycles of the political ecology. We conclude by considering the implications of these relationships with the state for the organisational resilience of subject associations and their effectiveness as actors within the professional ecology.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Levelling Up Social Inclusion: Scaling and Evaluating a Neurodiversity-Affirming Gaming Program Across Ten Schools</summary>
+    <div class="abstract-authors">Matthew Harrison, Dr. Sarah Timperley, Dr. Jess Rowlings, Dr. Jessica Riordan, Dr. Sean Marshall, Dr. Ghislain Arbour, Mel Vallence</div>
+    <div class="abstract-body">
+      <p>Too many autistic young people experience isolation and exclusion at school, while traditional social skills programmes can reward conformity and masking rather than authentic connection. This neurodivergent-led research project is scaling the Next Level Collaboration intervention from a local pilot to ten autism-specific schools in New South Wales.</p>
+      <p>Next Level Collaboration uses cooperative video games as a structured context for explicitly teaching, practising and reflecting on collaborative skills. Across a 20-week intervention, groups of autistic students aged 8&ndash;15 work together to communicate, plan, solve problems and, occasionally, rescue a digital spaceship from disaster. Educators are trained and supported to deliver the programme during school lunchtimes.</p>
+      <p>Using a multi-phase, mixed-methods implementation and impact design, the study examines changes in collaborative skill use, peer relationships, wellbeing, belonging, loneliness and school attendance. It also investigates implementation fidelity, contextual adaptations, social validity, and the experiences of students and educators.</p>
+      <p>This presentation will offer an early preview of the initial data as the programme begins to level up across participating schools. By combining rigorous evaluation with playful learning and lived-experience leadership, the project explores whether cooperative gaming can help turn social connection from a side quest into part of the main storyline for autistic students.</p>
+    </div>
+  </details>
+</div>
+
+<!-- Parallel Session 3.1 -->
+<div id="abstracts-ps3-1" class="abstract-session group-3">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 3.1 &mdash; Gender, Sexuality and Critical Subjectivities in Education</h3>
+    <span class="room">Room 217 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-3">&larr; Back to Parallel Session 3 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Parenting for Gender Equity in Early Childhood: Under the Australian Panopticon</summary>
+    <div class="abstract-authors">Kylie Smith</div>
+    <div class="abstract-body">
+      <p>This paper reports on a small-scale pilot project that invited parents with young children aged birth to 5 years of age to share their understandings of gender equity and the impact this has for the ways they parent their child. While parents discussed their beliefs in gender equity and the desire for all children to have equal access to learning and development opportunities, they storied their lived experiences of navigating essentialist gender discourses outside of the immediate family.</p>
+      <p>Parents discussed the ways gender norms were introduced, reinforced and at times regulated by extended family members, early childhood settings and extra-curricular activities and spaces. Drawing on feminist poststructuralist theories the paper explores the ways power operates through gendered discourses to privilege and silence gendered subject positions as parents navigate and negotiate concerns for their child’s safety as well as maintaining relationships with family and institutions.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Lesbian Loo: Public Intimacies and the Infrastructures of Campus</summary>
+    <div class="abstract-authors">Queering Campus Collective, Jessica Gerrard, Matthew Keynes, Sam Stiegler, Sarah Truman</div>
+    <div class="abstract-body">
+      <p>What might a theory of queer and trans nourishing offer studies of education? Drawing on our collective book project, <em>Queering Campus: Nourishing in the Ruins of the University</em> (Cambridge, 2027), we develop &lsquo;queer nourishing&rsquo; as an analytic for thinking about how queer and trans lives are sustained, constrained and intermittently made (im)possible on campus.</p>
+      <p>In doing so, we offer queer readings of campus that extend beyond identity and representation, and towards instead consideration of campus atmospheres, infrastructures, memories, and mobilities. This paper unfolds through collaborative &lsquo;thick readings&rsquo; of a walking interview with one queer university alumnus, Shannon. It is centred on the &lsquo;Lesbian Loo&rsquo;, an ordinary campus toilet repeatedly marked through the inscription of lesbian graffiti.</p>
+      <p>We read the toilet as an educative infrastructure: a material site through which queer knowledge, memory, belonging, and intimacy are produced and circulated. The archive is ephemeral yet recurring, making visible forms of queer life that are simultaneously public and private (Cvetkovich, 2003). The Lesbian Loo thus troubles conventional distinctions between the intimate and the public, revealing how queer nourishing takes place through mundane acts of inscription, recognition, repetition, and collective memory (Ahmed 2019).</p>
+      <p>Building on Berlant’s (2016) account of public intimacy, we argue that the Lesbian Loo demonstrates how university infrastructures can become sites of queer nourishment precisely through their capacity to hold traces of lives that institutions repeatedly attempt to erase (Gerrard &amp; Barron 2020). Attending to such infrastructures shifts analysis from whether queer lives are represented on campus to how campus itself participates in making queer life possible.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>"I love it. But..." Affective tensions and professional unsettling in subject English</summary>
+    <div class="abstract-authors">Grace Elkins, Troy Potter, Sarah Truman, Larissa McLean Davies</div>
+    <div class="abstract-body">
+      <p>This paper brings R. K. Elliott’s (1974) account of educational love into conversation with Sara Ahmed’s (2006) queer phenomenology to ask how teachers’ love of their subject can be at once motivating and limiting. We argue that whiteness orients subject English&mdash;and English teachers&mdash;such that the object of their love is only partially in view.</p>
+      <p>These attachments reflect and reproduce normative orientations, but they can be interrupted through creative professional learning, enabling a reorientation towards a more critical, conscientious practice that both complicates and deepens their love. To explore this, we draw on the case of Teacher M, a white-settler, early career English teacher from Victoria, Australia, approximately 10 weeks after she had participated in a two-day, writing-based, professional learning workshop in Melbourne, 2025.</p>
+      <p>Tracing M’s account, we follow two movements: (1) a moment of unsettling that complicates, yet deepens, her love of the subject; and (2) how her unsettled state influences her approach to teaching English going forward. Unsettling love, we argue, is not undoing of love; rather, it is a process through which teachers can come to understand and address the complex and contradictory elements of their subject’s epistemologies and ontologies.</p>
+    </div>
+  </details>
+</div>
+
+<!-- Parallel Session 3.2 -->
+<div id="abstracts-ps3-2" class="abstract-session group-3">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 3.2 &mdash; Systems, Inequality and Global Educational Futures</h3>
+    <span class="room">Room 218 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-3">&larr; Back to Parallel Session 3 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Inequity by Design: How education systems reproduce social inequalities</summary>
+    <div class="abstract-authors">Jenny Chesters</div>
+    <div class="abstract-body">
+      <p>Evidence that the Australian education system is among the most inequitable in the OECD suggests that inequity is built into the system. The marketisation of education may have resulted in an efficient allocation of resources, however, at the same time, it has exacerbated social inequalities.</p>
+      <p>Although 53% of the 2022 cohort of grade 12 students commenced undergraduate degrees in 2023, only 17% were from low SES families. Furthermore, only 8% of students attending research-intensive universities were from low SES families. Preparation for university requires access to ATAR subjects and research shows that access is dependent on the ability of schools to provide the resources required.</p>
+      <p>How education systems are funded is important because our democracy is underpinned by the active involvement of citizens. This paper has two aims. Firstly, I examine the barriers to, and facilitators of, access to educational opportunities to illustrate how an inequitable education system reproduces social inequalities. Secondly, I discuss why inequity in access to educational opportunities matters in our current political and economic climate.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Social inequality in early access to the senior secondary curriculum in Australia</summary>
+    <div class="abstract-authors">Quentin Maire, Natalie Calleja</div>
+    <div class="abstract-body">
+      <p>The organisation of the senior secondary curriculum in Australia has been the object of ongoing criticism for its inability to meet the needs of diverse students. In the final two years of school, students engaging in the academic curriculum typically study five to six subjects to meet their end-of-school certificate requirement and, in some cases, receive a tertiary entrance score.</p>
+      <p>However, it has become increasingly common for students to study senior subjects in Year 10, the final year of compulsory schooling in most of the country. This has the potential to either ease the pressures of intense study requirements in the final years of school, with potential for improved social inclusion, or to contribute to inequalities of access to the academic curriculum.</p>
+      <p>In this presentation, we draw on large-scale national survey data to examine social class differences in early access to senior secondary subjects. We find that a significant minority of students (37 per cent) study Years 11&ndash;12 subjects early; that socioeconomically disadvantaged students are less likely to do so; and that subject hierarchies further stratify social patterns of access.</p>
+      <p>We consider implications for the sociology of curriculum and for opportunities to learn in school systems with high resourcing inequality.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>From Utopia to Repair: UNESCO and the shifting politics of educational futures</summary>
+    <div class="abstract-authors">Jason Beech, Matthew Keynes, Julie McLeod, Shannon Peters</div>
+    <div class="abstract-body">
+      <p>International organisations deploy anticipatory techniques aimed at colonising the future as a means of governing in the absence of sovereignty. We contend that the ways in which specific futures are imagined, prioritised, and managed, reveal the ways in which the future is also the object of calculation and control.</p>
+      <p>In this paper, we present an analysis of UNESCO&rsquo;s three major futures-oriented education reports: the 1972 Faure report, the 1996 Delors report, and the 2021 <em>Reimagining Our Futures Together</em> report. We examine how each report constructs relations between past, present, and future, and consider how education is positioned in relation to historical change.</p>
+      <p>Our findings suggest that both the Faure and Delors Reports represent the future positively, as a panacea (e.g. the knowledge society), and envision courses of action to guide humanity towards this utopian future. Meanwhile, the 2021 Report anticipates a problematic future. It calls for a &lsquo;new social contract for education&rsquo; that can repair social and ecological injustices while transforming the future and in doing so, marks the ascendancy of repair as a guiding concept on the global education stage.</p>
+      <p>The paper interrogates how reparative orientations sit alongside UNESCO&rsquo;s enduring commitments to human flourishing and conceptions of historical change.</p>
+    </div>
+  </details>
+</div>
+
+<!-- Parallel Session 3.3 -->
+<div id="abstracts-ps3-3" class="abstract-session group-3">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 3.3 &mdash; Mental Health, Belonging and Protection in School Communities</h3>
+    <span class="room">Room 417 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-3">&larr; Back to Parallel Session 3 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>School social environment and the group psychology of belonging: Does it really mater for teachers and students?</summary>
+    <div class="abstract-authors">Katherine J Reynolds, Haochen Zhou, Diana Cardenas, Kathleen Klik</div>
+    <div class="abstract-body">
+      <p>Based on the social identity perspective it is hypothesised that when people identify with a particular group (and they self-categorise as a group member), the norms, values, and beliefs that define the group are internalised (there is self-stereotyping in relation to this &ldquo;meaning&rdquo; or &ldquo;content&rdquo;). The group stereotype or identity content becomes self-relevant and meaningful and comes to influence the attitudes and behaviour of group members.</p>
+      <p>These ideas have not been previously demonstrated in complex naturalistic systems. In this talk two longitudinal studies based on an education jurisdiction school survey will be outlined that concern students’ learning and well-being (grades 7&ndash;10; N=6,537 Wave 3) and teachers’ morale, commitment and exhaustion (N = 4,302 Wave 3).</p>
+      <p>School or group climate assessed at Wave 1 (norms, values and beliefs of the group) was significantly related to school identification at Wave 2 which in turn explained significant variance in measures of both positive affect and negative (depression) mental health, learning engagement and staff organisational behaviour in Wave 3.</p>
+      <p>The implications of this research for behaviour change models are outlined as well as the need for person-level trajectories regarding which groups emerge as important, for whom and when.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Ameliorating the negative effects of school based mental health programs – student voice as a beacon of hope?</summary>
+    <div class="abstract-authors">Georgia Dawson, Dr Alison Giles-Kaye, Courtney O'Brien, Professor Jon Quach</div>
+    <div class="abstract-body">
+      <p>School-based mental health programs are prolific, but this does not guarantee good outcomes for all students. This presentation brings together two separate studies focused on school-based mental health programs.</p>
+      <p>The first considered the scope of student voice in the design and evaluation of universal school mental health programs through a scoping review. Results showed that meaningful student involvement in programme design is rare and where present in evaluations, often limited or tokenistic.</p>
+      <p>In our second study, we recently surveyed teachers and school staff about their perceptions of unintended negative effects from school-based mental health programs and interventions on students. Findings generated four themes with impacts ranging from opportunity cost to iatrogenic effects.</p>
+      <p>In line with the conference theme, our hope in bringing these studies together is to consider student voice as a potential mediating factor for negative impacts, informing programme design, evaluation and future research. Student voice could anticipate and identify risks, improve acceptability and engagement, and reduce stigma.</p>
+      <p>In so doing it could build an environment of research reciprocity and mutual benefit for students, schools and researchers. We recommend schools and programme developers involve students in design, evaluation, and monitoring for unintended negative impacts to improve outcomes for all.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>What students have, not only what they face: Risk-protection profiles and adolescent mental health in secondary schools</summary>
+    <div class="abstract-authors">Ying Ye, Gavin Slemp</div>
+    <div class="abstract-body">
+      <p>School mental health screening identifies adolescents by the symptoms they already show and reads low risk as wellness. We asked a more hopeful question: whether the resources and relationships that sustain adolescents carry information that risk cannot.</p>
+      <p>Guided by dual-factor models, we followed 5,723 Chinese adolescents for one academic year. Latent profile analysis of four risk and four protective indicators yielded five profiles, and multilevel models (2,678 students in 16 schools) predicted clinically meaningful deterioration in wellbeing, psychosocial symptoms, school refusal, self-harm, and suicidal behaviour.</p>
+      <p>Protection operated broadly: an Adaptive profile had lower odds on all five outcomes (ORs = 0.36&ndash;0.72). Risk operated narrowly and relationally: peer victimisation nearly doubled odds of suicide worsening (OR = 1.93), and family adversity elevated self-harm worsening (OR = 1.33).</p>
+      <p>A Resource-Depleted profile, low in protection yet average in risk, had the worst baseline mental health but is invisible to risk-focused screening. A positive school climate may buffer deterioration among these students, pointing to the school community as a protective relationship.</p>
+      <p>Hope here is practical: schools can rebuild what vulnerable students lack before difficulty surfaces. Low risk did not equal wellness: screening should weigh what students have, not only what they face.</p>
+    </div>
+  </details>
+</div>
+
+<!-- Parallel Session 3.4 -->
+<div id="abstracts-ps3-4" class="abstract-session group-3">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 3.4 &mdash; Multimodal and Multilingual Literacies in Teacher Education</h3>
+    <span class="room">Room 419 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-3">&larr; Back to Parallel Session 3 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Re-situating CLIL knowledge through teacher co-design: scaffolding language-for-thinking for new arrivals transitioning to mainstream subject literacies</summary>
+    <div class="abstract-authors">Dannie Wang, Prof Russell Cross, Dr Shu Ohki</div>
+    <div class="abstract-body">
+      <p>This co-design study collaborated with secondary English as an Additional Language (EAL) practitioners to develop pedagogical knowledge for scaffolding subject-specific thinking in an English-language New Arrivals Program (NAP). NAP is an intensive 6&ndash;12-month programme that prepares newly arrived students to enter Australian mainstream schools.</p>
+      <p>Informed by a Vygotskian sociocultural intervention-based model (Johnson et al., 2024), the researchers and practitioners began by co-identifying the problem in practice: a &ldquo;contradiction&rdquo; in Vygotskian terms. We then co-explored how CLIL knowledge and principles, and its extension Pluriliteracies Teaching for Deeper Learning (PTDL), had potential to be resituated in the NAP context to resolve this contradiction.</p>
+      <p>Data comprised recordings of six professional-learning discussions, reflective journals, intervention artefacts, and two stimulated-recall interviews based on classroom observations. Cultural-Historical Activity Theory and its expansive learning cycle (Engeström, 1987) were used to examine how teachers adopted and reworked CLIL and PTDL tools, progressing from questioning existing practices to refining a NAP-specific CLIL model.</p>
+      <p>Findings show how teachers recontextualised CLIL principles to identify content demands, make language demands explicit, design cognitively meaningful tasks, and respond to students’ diverse backgrounds within a time-limited transition programme. The study extends understanding of how CLIL can support EAL learners in transitional language settings.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Making, mattering and researching otherwise: collective, creative hope as a radical act</summary>
+    <div class="abstract-authors">Ana Ward-Davies</div>
+    <div class="abstract-body">
+      <p>In times of polycrisis, educators are increasingly asked to be resilient: to adapt, persist and continue teaching amid intensifying pressures of burnout, standardisation, precarity and social uncertainty. What might become possible if resilience were understood not as an individual capacity to withstand crisis, but as a relational and reciprocal practice of sustaining one another?</p>
+      <p>This paper draws on my Doctor of Education inquiry into how critical and creative practices enable teachers and students to meaningfully work through polycrisis cultivating hopeful conditions in which other futures can become imaginable. The research unsettles conventional distinctions between research process, finding and output.</p>
+      <p>Collaborative making throughout the research led to the development of a professional learning zine that invites teachers to articulate experience and, through collaborative sharing and making, imagine possibilities beyond individualised resilience. Importantly, this zine is not just research output, but a relational infrastructure that emphasises hope, reciprocity and professional mattering.</p>
+      <p>I propose that hope is radical when it becomes a practice of making otherwise: making relationships, making meaning, making research and making possible futures together. In this sense, hope is neither optimism nor an individual disposition, but a relational infrastructure cultivated through collaboration, materials and pedagogies.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Making Learning Visible: Exploring Pre-service Teachers' Academic Literacy Practices through Arts-Rich Translanguaging Pedagogy</summary>
+    <div class="abstract-authors">Melissa Jufenna Slamet, Julie Choi, Yvette Slaughter</div>
+    <div class="abstract-body">
+      <p>In increasingly diverse educational contexts, pre-service teachers need opportunities to engage with academic learning in ways that recognise the linguistic, cultural, and semiotic resources they bring to teacher education. Arts-Rich Translanguaging Pedagogy (ARTP) offers one such possibility by creating spaces for multilingual, multimodal, and arts-based meaning-making.</p>
+      <p>This paper explores how ARTP supported pre-service teachers' academic literacy practices in a Master of TESOL course at the University of Melbourne.</p>
+      <p>Drawing on language assemblages theory, the study examines participants' engagement in arts-rich learning activities, including identity text creation, multimodal composing, and dialogic reflections. Data comprise participants' artefacts, written reflections, classroom interactions, and interviews.</p>
+      <p>Findings suggest that ARTP facilitated meaningful engagement by enabling pre-service teachers to connect personal histories with academic concepts, mobilise diverse resources for learning, and critically examine assumptions about language, literacy, and teaching.</p>
+      <p>Through an ARTP lens, literacy practices extend beyond cognitive processes to encompass affective, ideological, performative, and aspirational dimensions of meaning-making. These often-overlooked dimensions illuminate how pre-service teachers develop digital literacies, sustain motivation in learning, and cultivate criticality for navigating linguistically and culturally diverse contexts. The study highlights institutional conditions and contributes to a pedagogical framework of three meaning-making orientations that support meaningful learning in teacher education.</p>
+    </div>
+  </details>
+</div>
+
+<!-- Parallel Session 3.5 -->
+<div id="abstracts-ps3-5" class="abstract-session group-3">
+  <div class="abstract-session-header">
+    <h3>Parallel Session 3.5 &mdash; Data and Assessment in Education</h3>
+    <span class="room">Room 421 KLD</span>
+  </div>
+  <p class="back-link small">
+    <a href="#parallel-session-3">&larr; Back to Parallel Session 3 schedule</a>
+  </p>
+
+  <details class="abstract-item">
+    <summary>Assessing the Value of Dynamic Assessment of Early Numeracy Abilities across the Preschool-to-School Transition</summary>
+    <div class="abstract-authors">Nathalie Parry, Kelly Trezise, Robert Reeve, Sean Kang, Lorraine Graham, Bert De Smedt</div>
+    <div class="abstract-body">
+      <p>Characterising preschoolers’ early numeracy is crucial, as these skills strongly predict later mathematics achievement, and inform timely, targeted support. Standardised assessments capture performance at a single time point, yet are limited in elucidating how numeracy skills emerge and develop.</p>
+      <p>Dynamic assessment may offer a more nuanced picture by systematically offering hints when a child is unable to solve a problem independently, thereby capturing emerging skills.</p>
+      <p>This study examined the efficacy of a dynamic assessment approach for characterising preschool children’s early numeracy abilities and its capacity to predict numeracy performance in the early years of schooling. We followed 44 children over two years from preschool through formal schooling, assessing early number skills in three domains (number, relations, and operations).</p>
+      <p>In preschool, children completed dynamic assessment of eight numeracy skills and the Test of Early Mathematics Abilities (TEMA-3), which was re-administered Grade 1.</p>
+      <p>We examined children’s responsiveness to support within the dynamic assessment using mixed-effects logistic regressions; support significantly improved accuracy, although gains varied according to numeracy skill, item difficulty, and number of prompts.</p>
+      <p>Linear regression analyses indicated that Grade 1 TEMA-3 scores were better predicted by preschool dynamic assessment (z = 2.84, p&lt;.01) than by preschool TEMA-3 (z=1.56, p&gt;.05) overall and across domains. These findings provide insight into skill-specific differences in responsiveness to support and suggest that prompt requirements may indicate individual differences in early numeracy performance.</p>
+      <p>The study highlights the efficacy of dynamic over conventional assessments for predicting numeracy abilities in school, with implications for research and educational instruction.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Active assessing: Supporting academic achievement and well-being at the teaching-learning-assessing coalface</summary>
+    <div class="abstract-authors">John Quay</div>
+    <div class="abstract-body">
+      <p>Assessment is commonly described using various appended adjectives &ndash; summative assessment, formative assessment, authentic assessment, programme-based assessment &ndash; and there are many more. In this session I introduce the idea of &ldquo;active assessing&rdquo; and: (1) how this is applicable in a unit of work (or a subject in university terms); (2) how this supports academic achievement; (3) how this supports well-being.</p>
+      <p>And finally I turn to questions that ideas around active assessing may raise for university teaching-learning-assessing.</p>
+    </div>
+  </details>
+
+  <details class="abstract-item">
+    <summary>Educators on Screen: A Global Database for Educational Research</summary>
+    <div class="abstract-authors">Hugh Gundlach</div>
+    <div class="abstract-body">
+      <p>Global teacher shortages make it essential to understand and raise the cultural status of teaching. Evidence shows that teachers’ attraction to&mdash;and retention in&mdash;the profession closely tracks societal status and social approval: how teachers are regarded by peers, families and the wider public is a stronger predictor of career longevity than many other factors.</p>
+      <p>Recent analyses of policy and news coverage reveal a growing negative tone in portrayals of teachers. Popular culture too, especially film and television, plays a powerful role in shaping those perceptions.</p>
+      <p>This presentation launches <em>Educators on Screen</em>, believed to be the world’s largest searchable database of fictional teachers in film and television. It documents over 2,000 teachers from more than 1,000 films and TV series across 125+ years, with demographic data on teachers and student populations from early learning to higher education.</p>
+      <p>See the database in action and learn how dominant narrative tropes shape public attitudes and the consequences for recruitment, retention and professional respect. The resource, featured on ABC TV and radio, offers unique datasets for researchers across diverse disciplines within the Faculty.</p>
+    </div>
+  </details>
+</div>
+
+
+
+
+  </section>
+
+  <!-- Acknowledgements -->
+  <section id="acknowledgements">
+    <h2>Acknowledgements</h2>
+    <p>
+      The Faculty of Education acknowledges the Traditional Owners of the unceded land on which we meet: the Wurundjeri Woi‑wurrung people of the Kulin nation. We pay respect to Elders past, present and future, and acknowledge the importance of Indigenous knowledge in Education. As a community of researchers, teachers, professional staff and students we are privileged to work and learn every day with Indigenous colleagues and partners.
+    </p>
+
+    <h3>Organising Committee</h3>
+    <ul>
+      <li>Danielle D’Agostino</li>
+      <li>Ashlee Thomas</li>
+      <li>Sarah Fortuna</li>
+      <li>Kelly Trezise</li>
+      <li>Chloë Nelson</li>
+      <li>Sonja Arndt</li>
+    </ul>
+
+    <p>Food and drink supplied by Impressive Platters.</p>
+    <p>Thank you for attending the 2026 Faculty of Education Staff Conference.</p>
+  </section>
+
+</main>
+
+</body>
+</html>
